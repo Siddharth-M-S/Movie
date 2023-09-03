@@ -5,7 +5,7 @@ const SEARCH_API =
   'https://api.themoviedb.org/3/search/movie?api_key=3fd2be6f0c70a2a598f084ddfb75487c&query="'
 
 const main = document.getElementById('main')
-const form = document.getElementById('form')
+// const form = document.getElementById('form')
 const search = document.getElementById('search')
 
 // Get initial movies
@@ -24,10 +24,10 @@ function showMovies(movies) {
   movies.forEach((movie) => {
     const { title, poster_path, vote_average, overview } = movie
 
-    const movieEl = document.createElement('div')
-    movieEl.classList.add('movie')
+    const moviel = document.createElement('div')
+    moviel.classList.add('movie')
 
-    movieEl.innerHTML = `
+    moviel.innerHTML = `
             <img src="${IMG_PATH + poster_path}" alt="${title}">
             <div class="movie-info">
           <h3>${title}</h3>
@@ -38,7 +38,7 @@ function showMovies(movies) {
           ${overview}
         </div>
         `
-    main.appendChild(movieEl)
+    main.appendChild(moviel)
   })
 }
 
