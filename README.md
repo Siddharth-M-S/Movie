@@ -7,14 +7,14 @@ This is a simple movie web page that allows users to search for movies and see t
 
 1. Clone the repo.
 2. Install the dependencies.
-3. Run the app.
-4. Open the app in your browser.
+3. Run the page.
+4. Open the web page in your browser.
 5. Search for a movie.
 6. Click on a movie to see its details.
 
 ## Code snippets
 
-Here are some code snippets from the app:
+Here are some code snippets from the page:
 
 ```html
 <!DOCTYPE html>
