@@ -17,8 +17,15 @@ async function getMovies(url) {
 
   showMovies(data.results)
 }
+function reload() {
+  window.location.reload()
+}
 
 function showMovies(movies) {
+  if (movies.length == 0) {
+    alert('Please Enter a Correct Movie Name')
+    return
+  }
   main.innerHTML = ''
 
   movies.forEach((movie) => {
@@ -56,11 +63,14 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
 
   const searchTerm = search.value
-
-  if (searchTerm && searchTerm !== '') {
-    getMovies(SEARCH_API + searchTerm)
-
-    search.value = ''
+  // if (total_results == '0') {
+  //   alert('oops')
+  // } else
+  if (searchTerm !== '') {
+    if (getMovies(SEARCH_API + searchTerm)) {
+      // console.log(search.value)
+      search.value = ''
+    }
   } else {
     window.location.reload()
   }
